@@ -91,6 +91,11 @@ html {
   font-size: 1.6rem;
   color: var(--color-site-3);
   font-weight: 500;
+  transition: all 0.2s ease-in-out;
+}
+
+.ProductCard-Btn:hover {
+  background-color: var(--color-site-2);
 }
 
 @media screen and (min-width: 768px) {

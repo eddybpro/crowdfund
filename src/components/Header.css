@@ -93,6 +93,11 @@ header {
   color: var(--color-site-3);
   font-weight: 500;
   border-radius: 2.5rem;
+  transition: all 0.2s ease-in-out;
+}
+
+.MastercraftBox-BtnsCard-BackBtn:hover {
+  background-color: var(--color-site-2);
 }
 
 .MastercraftBox-BtnsCard-BookMarkBtn {

@@ -171,6 +171,11 @@ html {
   cursor: pointer;
   font-weight: 500;
   border-radius: 2rem;
+  transition: all 0.2s ease-in-out;
+}
+
+.PledgeContainer-PledgeBox-Inputs > button:hover {
+  background-color: var(--color-site-2);
 }
 
 @media screen and (min-width: 768px) {
