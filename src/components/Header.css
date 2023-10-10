@@ -1,0 +1,167 @@
+@import url("https://fonts.googleapis.com/css2?family=Commissioner:wght@400;500;700&display=swap");
+
+:root {
+  --color-brand-1: hsl(0, 0%, 0%);
+  --color-brand-2: hsl(0, 0%, 48%);
+
+  --color-site-1: hsl(176, 50%, 47%);
+  --color-site-2: hsl(176, 72%, 28%);
+  --color-site-3: hsl(0, 0%, 100%);
+  --color-site-4: hsla(0, 0%, 48%, 0.1);
+  --color-site-5: hsla(0, 0%, 48%, 0.4);
+
+  --font-commissioner: "Commissioner", sans-serif;
+}
+
+*,
+*::after,
+*::before {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: var(--font-commissioner);
+}
+
+html {
+  font-size: 62.5%;
+}
+
+header {
+  width: 100%;
+  background: url("../assets/image-hero-mobile.jpg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-color: --cs;
+  padding: 2.5rem 2.5rem;
+  height: 44vh;
+  margin-bottom: 24rem;
+}
+
+@media screen and (max-width: 300px) {
+  header {
+    margin-bottom: 34rem;
+  }
+}
+
+.MastercraftBox {
+  background-color: var(--color-site-3);
+  padding: 2.5rem 2rem;
+  border-radius: 1rem;
+  text-align: center;
+  border: 1px solid var(--color-site-5);
+  transform: translateY(12rem);
+}
+
+.MastercraftBox-Img {
+  display: block;
+  margin: -5rem auto 2rem;
+}
+
+.MastercraftBox-Title {
+  font-size: 2.5rem;
+  line-height: 3.5rem;
+  margin-bottom: 2rem;
+  text-transform: capitalize;
+}
+
+.MastercraftBox-Para {
+  font-size: 1.6rem;
+  color: var(--color-brand-2);
+  line-height: 2.5rem;
+  margin-bottom: 2rem;
+}
+
+.MastercraftBox-BtnsCard {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+}
+
+.MastercraftBox-BtnsCard > button {
+  display: block;
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+
+.MastercraftBox-BtnsCard-BackBtn {
+  background-color: var(--color-site-1);
+  padding: 1.5rem 3rem;
+  font-size: 1.6rem;
+  color: var(--color-site-3);
+  font-weight: 500;
+  border-radius: 2.5rem;
+}
+
+.MastercraftBox-BtnsCard-BookMarkBtn {
+  background-color: transparent;
+}
+
+.MastercraftBox-BtnsCard-BookMarkBtn > img {
+  width: 5rem;
+}
+
+.ImgBookmarked {
+  filter: brightness(320%) invert(0%) sepia(142%) saturate(351%)
+    hue-rotate(127deg) contrast(95%);
+}
+
+.Desktop {
+  display: none;
+}
+
+@media screen and (min-width: 500px) {
+  header {
+    margin-bottom: 20rem;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  header {
+    background: url("../assets/image-hero-desktop.jpg");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-color: --cs;
+    padding: 2.5rem 2.5rem;
+    height: 84vh;
+  }
+
+  .MastercraftBox {
+    transform: translateY(36rem);
+    max-width: 120rem;
+    margin: auto;
+    padding: 2.5rem 4rem;
+  }
+
+  .MastercraftBox-Title {
+    font-size: 3.5rem;
+    margin-bottom: 3rem;
+  }
+
+  .MastercraftBox-Para {
+    margin-bottom: 3.5rem;
+  }
+
+  button.MastercraftBox-BtnsCard-BookMarkBtn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--color-site-4);
+    border-radius: 2.5rem;
+  }
+
+  .Desktop {
+    display: block;
+    padding: 1.5rem;
+    font-size: 1.6rem;
+    color: var(--color-brand-2);
+    font-weight: 500;
+  }
+
+  .Desktop.marked {
+    color: var(--color-site-1);
+  }
+}

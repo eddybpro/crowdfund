@@ -1,0 +1,221 @@
+@import url("https://fonts.googleapis.com/css2?family=Commissioner:wght@400;500;700&display=swap");
+
+:root {
+  --color-brand-1: hsl(0, 0%, 0%);
+  --color-brand-2: hsl(0, 0%, 48%);
+
+  --color-site-1: hsl(176, 50%, 47%);
+  --color-site-2: hsl(176, 72%, 28%);
+  --color-site-3: hsl(0, 0%, 100%);
+  --color-site-5: hsla(0, 0%, 48%, 0.4);
+
+  --font-commissioner: "Commissioner", sans-serif;
+}
+
+*,
+*::after,
+*::before {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+.PledgeContainer {
+  border: 1px solid var(--color-site-5);
+  margin-bottom: 2rem;
+  border-radius: 1rem;
+}
+
+.PledgeContainer.out {
+  opacity: 0.4;
+  pointer-events: none;
+}
+
+.PledgeContainer.pledge {
+  border-color: var(--color-site-1);
+}
+
+.PledgeContainer-Grid-InputTitleBox {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 1.5rem;
+  padding: 2rem;
+}
+
+.check {
+  appearance: none;
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 50%;
+  border: 1px solid var(--color-site-5);
+  display: grid;
+  place-items: center;
+  cursor: pointer;
+}
+
+.check::before {
+  content: "";
+  display: block;
+  width: 1.5rem;
+  height: 1.5rem;
+  border-radius: 50%;
+  background-color: var(--color-site-1);
+  opacity: 0;
+}
+
+.check:checked:before {
+  opacity: 1;
+}
+
+.PledgeContainer-Grid-InputTitleBox-TitleBox > h2 {
+  font-size: 1.8rem;
+  color: var(--color-brand-1);
+  margin-bottom: 0.5rem;
+}
+
+.PledgeContainer-Grid-InputTitleBox-TitleBox > p {
+  font-size: 1.6rem;
+  color: var(--color-site-1);
+  font-weight: 500;
+}
+
+.PledgeContainer-Grid-Desc {
+  font-size: 1.6rem;
+  color: var(--color-brand-2);
+  line-height: 2.2rem;
+  padding: 0 2rem 2rem;
+}
+
+.PledgeContainer-Grid-Left {
+  margin-top: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 0.8rem;
+  padding: 0 2rem 2rem;
+}
+
+.PledgeContainer-Grid-Left > strong {
+  display: block;
+  font-size: 3rem;
+  color: var(--color-brand-1);
+}
+
+.PledgeContainer-Grid-Left > span {
+  display: block;
+  color: var(--color-brand-2);
+  font-size: 1.6rem;
+}
+
+.PledgeContainer-PledgeBox {
+  padding: 2rem;
+  border-top: 1px solid var(--color-site-5);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+}
+
+.PledgeContainer-PledgeBtns-Para {
+  font-size: 1.6rem;
+  color: var(--color-brand-2);
+}
+
+.PledgeContainer-PledgeBox-Inputs {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.PledgeContainer-PledgeBox-Inputs > label {
+  position: relative;
+}
+
+.PledgeContainer-PledgeBox-Inputs > label > p {
+  font-size: 1.6rem;
+  color: var(--color-brand-2);
+  position: absolute;
+  top: 50%;
+  left: 1rem;
+  transform: translateY(-50%);
+}
+
+.PledgeContainer-PledgeBox-Inputs > label > input {
+  display: block;
+  width: 10rem;
+  border: 1px solid var(--color-site-5);
+  outline: none;
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: var(--color-brand-1);
+  padding: 1rem 1.5rem 1rem 2.5rem;
+  border-radius: 2rem;
+}
+
+.PledgeContainer-PledgeBox-Inputs > button {
+  display: block;
+  width: 10rem;
+  outline: none;
+  background-color: var(--color-site-1);
+  color: var(--color-site-3);
+  border: none;
+  font-size: 1.6rem;
+  padding: 1rem 2rem;
+  cursor: pointer;
+  font-weight: 500;
+  border-radius: 2rem;
+}
+
+@media screen and (min-width: 768px) {
+  .PledgeContainer-Grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+  }
+
+  .PledgeContainer-Grid-InputTitleBox {
+    grid-area: 1/1/1/1;
+  }
+
+  .PledgeContainer-Grid-InputTitleBox-TitleBox {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 2rem;
+  }
+
+  .PledgeContainer-Grid-InputTitleBox-TitleBox > h2 {
+    font-size: 2.5rem;
+    margin-bottom: 0;
+  }
+
+  .PledgeContainer-Grid-InputTitleBox-TitleBox > p {
+    font-size: 2rem;
+  }
+
+  .PledgeContainer-Grid-Desc {
+    grid-area: 2/1/3/3;
+  }
+
+  .PledgeContainer-Grid-Left {
+    grid-area: 1/2/2/2;
+    margin-left: auto;
+  }
+
+  .PledgeContainer-PledgeBox {
+    padding: 2rem;
+    border-top: 1px solid var(--color-site-5);
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    gap: 2rem;
+  }
+}

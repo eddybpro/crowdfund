@@ -1,0 +1,132 @@
+@import url("https://fonts.googleapis.com/css2?family=Commissioner:wght@400;500;700&display=swap");
+
+:root {
+  --color-brand-1: hsl(0, 0%, 0%);
+  --color-brand-2: hsl(0, 0%, 48%);
+
+  --color-site-1: hsl(176, 50%, 47%);
+  --color-site-2: hsl(176, 72%, 28%);
+  --color-site-3: hsl(0, 0%, 100%);
+  --color-site-5: hsla(0, 0%, 48%, 0.4);
+
+  --font-commissioner: "Commissioner", sans-serif;
+}
+
+*,
+*::after,
+*::before {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: var(--font-commissioner);
+}
+
+html {
+  font-size: 62.5%;
+}
+
+.AboutContainer {
+  background-color: var(--color-site-3);
+  border: 1px solid var(--color-site-5);
+  padding: 2rem;
+  border-radius: 1rem;
+  margin: 3rem auto 0;
+  max-width: 120rem;
+}
+
+.AboutContainer.background {
+  background-color: var(--color-site-4);
+}
+
+.AboutContainer-Title {
+  font-size: 2.5rem;
+  color: var(--color-brand-1);
+  margin-bottom: 2rem;
+}
+
+.AboutContainer-Para {
+  font-size: 1.6rem;
+  color: var(--color-brand-2);
+  line-height: 2.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.AboutContainer-ProductBox.pointerNone {
+  pointer-events: none;
+  background-color: var(--color-site-4);
+}
+
+.AboutContainer-PledgeBox,
+.AboutContainer-ThanksBox {
+  position: absolute;
+  top: 8rem;
+  left: 2.5rem;
+  right: 2.5rem;
+  padding: 2rem;
+  background-color: var(--color-site-3);
+  border-radius: 1rem;
+  max-width: 120rem;
+  margin: auto;
+}
+
+.AboutContainer-PledgeBox::after,
+.AboutContainer-ThanksBox::after {
+  content: "";
+  position: absolute;
+  display: block;
+  top: 100%;
+  left: 0;
+  right: 0;
+  background-color: var(--color-site-4);
+  min-height: 140%;
+}
+
+.AboutContainer-PledgeBox-Head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 2rem;
+}
+
+.AboutContainer-PledgeBox-Head-Title {
+  font-size: 2.5rem;
+  color: var(--color-brand-1);
+}
+
+.AboutContainer-PledgeBox-Head-Btn {
+  background-color: transparent;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  width: 1.75rem;
+}
+
+.AboutContainer-PledgeBox-Head-Btn > img {
+  width: 100%;
+}
+
+.AboutContainer-PledgeBox-Para {
+  font-size: 1.6rem;
+  color: var(--color-brand-2);
+  line-height: 2.2rem;
+  margin-bottom: 2rem;
+}
+
+@media screen and (min-width: 768px) {
+  .AboutContainer {
+    padding: 2.5rem 4rem;
+  }
+
+  .AboutContainer-Title {
+    font-size: 3.5rem;
+  }
+
+  .AboutContainer-PledgeBox,
+  .AboutContainer-ThanksBox {
+    position: absolute;
+    top: 35rem;
+    left: 2.5rem;
+    right: 2.5rem;
+    padding: 2.5rem 4rem;
+  }
+}

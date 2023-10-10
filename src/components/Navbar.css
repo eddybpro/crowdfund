@@ -1,0 +1,135 @@
+@import url("https://fonts.googleapis.com/css2?family=Commissioner:wght@400;500;700&display=swap");
+
+:root {
+  --color-brand-1: hsl(0, 0%, 0%);
+  --color-brand-2: hsl(0, 0%, 48%);
+
+  --color-site-1: hsl(176, 50%, 47%);
+  --color-site-2: hsl(176, 72%, 28%);
+  --color-site-3: hsl(0, 0%, 100%);
+
+  --font-commissioner: "Commissioner", sans-serif;
+}
+
+*,
+*::after,
+*::before {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: var(--font-commissioner);
+}
+
+html {
+  font-size: 62.5%;
+}
+
+ul {
+  list-style: none;
+}
+
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  margin-bottom: 6.5rem;
+  position: relative;
+}
+
+.Logo {
+  display: block;
+  width: 14rem;
+}
+
+.Logo > img {
+  width: 100%;
+}
+
+.Menu > button {
+  background-color: transparent;
+  border: none;
+  outline: none;
+  width: 2rem;
+}
+
+.Menu > button > img {
+  width: 100%;
+}
+
+.NavLinks {
+  display: none;
+}
+
+.NavLinks.open {
+  display: block;
+  position: absolute;
+  top: 5rem;
+  left: -0.5rem;
+  right: -0.5rem;
+  border-radius: 1rem;
+  background-color: var(--color-site-3);
+  z-index: 10;
+}
+
+.NavLinks.open::before {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: -2rem;
+  right: -2rem;
+  height: 100vh;
+  background-color: var(--color-brand-2);
+  opacity: 0.5;
+}
+
+.NavLinks-Link {
+  padding: 2.5rem 2rem;
+}
+
+.NavLinks-Link:not(:last-of-type) {
+  border-bottom: 0.5px solid var(--color-brand-2);
+}
+
+.NavLinks-Link > a {
+  color: var(--color-brand-1);
+  font-size: 1.8rem;
+  text-decoration: none;
+  font-weight: 700;
+}
+
+@media screen and (min-width: 768px) {
+  .Logo {
+    width: 18rem;
+  }
+
+  .Menu {
+    display: none;
+  }
+
+  .NavLinks,
+  .NavLinks.open {
+    display: flex;
+    position: relative;
+    top: auto;
+    left: auto;
+    right: auto;
+    background-color: transparent;
+  }
+
+  .NavLinks.open::before {
+    display: none;
+  }
+
+  .NavLinks-Link {
+    padding: 0 2rem;
+  }
+
+  .NavLinks-Link:not(:last-of-type) {
+    border-bottom: none;
+  }
+
+  .NavLinks-Link > a {
+    color: var(--color-site-3);
+  }
+}
